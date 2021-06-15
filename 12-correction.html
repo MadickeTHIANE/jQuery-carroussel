@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p,
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        body {
+            font-family: sans-serif;
+            font-size: 16px;
+        }
+
+        .container {
+            width: 95%;
+            margin: 0 auto;
+            max-width: 960px;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        hr {
+            margin: 1em 0;
+        }
+
+        iframe {
+            max-width: 100% !important;
+            height: 260px;
+        }
+
+        /* header */
+
+        .menu {
+            padding: 1em 0 0 0;
+        }
+
+        @media (min-width:600px) {
+            .menu-btn {
+                display: none;
+            }
+        }
+
+
+
+        @media (min-width:600px) {
+            .menu {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .menu-item {
+            text-align: center;
+        }
+
+        .menu-navbar {
+            display: none;
+        }
+
+        @media (min-width:600px) {
+            .menu-navbar {
+                margin-left: auto;
+                display: flex;
+            }
+
+            .menu-item+.menu-item {
+                margin-left: 1em;
+            }
+        }
+
+        @media (max-width:599px) {
+
+            .glisser {
+                display: block;
+            }
+        }
+
+        /* main */
+
+        @media (min-width:600px) {
+            .body {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: 300px;
+                grid-gap: 1em;
+                align-items: flex-start;
+            }
+        }
+
+        .diaporama {
+            max-width: 100%;
+            height: 100%;
+            object-fit: cover;
+            box-sizing: border-box;
+            padding: 0.25em;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+
+        @media (max-width:600px) {
+            .diaporama {
+                margin-bottom: 1em;
+            }
+        }
+
+        .onglets {
+            height: 100%;
+            display: grid;
+            grid-template-rows: auto 1fr;
+            overflow: hidden;
+            grid-gap: 0.8em;
+        }
+
+        .onglets-body {
+            overflow-y: auto;
+        }
+
+        .onglets p,
+        .onglets li {
+            line-height: 1.1em;
+            margin-bottom: 1em;
+            padding-right: 0.8em;
+        }
+
+        .onglets p:last-child,
+        .onglets li:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="menu">
+            <button class="menu-btn">Menu</button>
+            <ul class="menu-navbar">
+                <li class="menu-item"><a href="#" class="menu-link">Accueil</a></li>
+                <li class="menu-item"><a href="#" class="menu-link">Présentation</a></li>
+                <li class="menu-item"><a href="#" class="menu-link">Blog</a></li>
+                <li class="menu-item"><a href="#" class="menu-link">Nous Contactez</a></li>
+            </ul>
+        </header>
+        <hr>
+        <main class="body">
+            <img src="" alt="" class="diaporama">
+            <div class="onglets">
+                <header class="onglets-header">
+                    <button data-index="0" class="onglets-btn">Actualité</button>
+                    <button data-index="1" class="onglets-btn">Top link</button>
+                    <button data-index="2" class="onglets-btn">Video</button>
+                    <button data-index="3" class="onglets-btn">Map</button>
+                </header>
+                <div class="onglets-body">
+                    <div class="onglets-contenu">
+                        <ul>
+                            <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ex doloribus asperiores in ipsam quidem totam officiis.
+                                    Eos, facere rem.</a></li>
+                            <li><a href="#">Minus veniam deserunt ipsam labore consectetur, incidunt iste voluptate expedita ipsa accusamus pariatur illo ad
+                                    iure, aliquam voluptates non veritatis.</a></li>
+                            <li><a href="#">Quaerat ullam minima recusandae aliquam, alias molestias assumenda consequuntur iure nesciunt ducimus aperiam,
+                                    debitis enim hic illum at natus impedit.</a></li>
+                        </ul>
+                    </div>
+                    <div class="onglets-contenu">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed praesentium voluptatum earum mollitia adipisci nulla maxime aspernatur
+                            at, nesciunt perspiciatis iste sit ullam eaque, laboriosam harum vel soluta facilis. Inventore hic consequuntur reprehenderit labore
+                            corporis voluptates doloribus, recusandae doloremque dicta.</p>
+                        <p>Vel nostrum, in officia, sint aliquid autem dignissimos accusantium voluptatum rerum ipsum quo ad, mollitia earum maiores cum! Iusto
+                            aliquid corporis cumque corrupti. Omnis eum dolores ipsum recusandae blanditiis laudantium tempore repudiandae numquam libero, id,
+                            voluptatem sapiente, dicta maxime labore.</p>
+                        <p>Sit, blanditiis dolorem voluptatum, omnis veritatis suscipit necessitatibus possimus voluptas repellendus animi optio facilis
+                            doloribus ratione, inventore officiis harum obcaecati quos labore accusantium asperiores aliquid. Rem, cum animi explicabo officiis
+                            quas dolor vero aut adipisci optio, ea atque nesciunt sunt.</p>
+                    </div>
+                    <div class="onglets-contenu">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/pwz7GbBn8vE" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="onglets-contenu">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.991625693752!2d2.2922926151351675!3d48.858370079287596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1619718812165!5m2!1sfr!2sfr"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        // menu
+        $(".menu-btn").on("click", function () {
+            $(".menu-navbar").toggleClass("glisser")
+        });
+
+        // diaporama 
+
+        let index = 0;
+        const diapositives = [
+            "https://source.unsplash.com/random/700x400",
+            "https://source.unsplash.com/random/700x401",
+            "https://source.unsplash.com/random/700x402",
+            "https://source.unsplash.com/random/700x403",
+            "https://source.unsplash.com/random/700x404",
+            "https://source.unsplash.com/random/700x405",
+        ];
+
+        function gestionDiaporama() {
+            if (index >= diapositives.length) {
+                index = 0;
+            }
+            $(".diaporama").attr("src", diapositives[index]);
+            index++;
+            setTimeout(gestionDiaporama, 2000);
+        }
+
+        gestionDiaporama()
+
+        // onglets
+
+        $(".onglets-contenu").css("display", "none").first().css("display", "block");
+
+        $(".onglets-btn").on("click", function () {
+            const index = $(this).data("index");
+            $(".onglets-contenu").css("display", "none").eq(index).css("display", "block");
+        });
+
+    </script>
+</body>
+
+</html>
